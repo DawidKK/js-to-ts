@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import List from '../../components/List';
+import { TPost } from '../../types';
 
-const Posts = (props) => {
-  const [posts, setPosts] = useState(null);
+const Posts = () => {
+  const [posts, setPosts] = useState<TPost[] | []>([]);
 
   useEffect(() => {
     axios
